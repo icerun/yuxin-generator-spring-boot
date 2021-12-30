@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuxin.distributeids.mapper.IdStrategyMapper">
+
+    <resultMap type="com.yuxin.distributeids.entity.IdStrategy" id="IdStrategyMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="idName" column="id_name" jdbcType="VARCHAR"/>
+        <result property="idPrefix" column="id_prefix" jdbcType="VARCHAR"/>
+        <result property="idSuffix" column="id_suffix" jdbcType="VARCHAR"/>
+        <result property="idStep" column="id_step" jdbcType="INTEGER"/>
+        <result property="idTimePattern" column="id_time_pattern" jdbcType="VARCHAR"/>
+        <result property="idLength" column="id_length" jdbcType="INTEGER"/>
+        <result property="idKey" column="id_key" jdbcType="VARCHAR"/>
+        <result property="idKeyExpire" column="id_key_expire" jdbcType="INTEGER"/>
+        <result property="idIncrKey" column="id_incr_key" jdbcType="VARCHAR"/>
+        <result property="idIncrKeyExpire" column="id_incr_key_expire" jdbcType="INTEGER"/>
+        <result property="idStatus" column="id_status" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单条-->
+    <select id="getByIdKey" resultMap="IdStrategyMap">
+        select id,
+               id_name,
+               id_prefix,
+               id_suffix,
+               id_step,
+               id_time_pattern,
+               id_length,
+               id_key,
+               id_key_expire,
+               id_incr_key,
+               id_incr_key_expire,
+               id_status,
+               create_time,
+               update_time
+        from id_strategy
+        where id_status = 1
+          and id_key = #{idKey}
+    </select>
+
+
+</mapper>
+
