@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/yuxin-generator-spring-boot.iml" filepath="$PROJECT_DIR$/.idea/yuxin-generator-spring-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuxin-generator-spring-boot-autoconfigure/yuxin-generator-spring-boot-autoconfigure.iml" filepath="$PROJECT_DIR$/yuxin-generator-spring-boot-autoconfigure/yuxin-generator-spring-boot-autoconfigure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuxin-generator-spring-boot-starter/yuxin-generator-spring-boot-starter.iml" filepath="$PROJECT_DIR$/yuxin-generator-spring-boot-starter/yuxin-generator-spring-boot-starter.iml" />
     </modules>
   </component>
 </project>
